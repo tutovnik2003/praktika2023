@@ -1,0 +1,20 @@
+from decimal import Decimal, getcontext
+
+# Установка точности вычислений
+getcontext().prec = 50
+
+def add_long_numbers(num1, num2):
+    # Преобразование чисел в длинный формат Decimal
+    decimal_num1 = Decimal(num1)
+    decimal_num2 = Decimal(num2)
+
+    # Сложение длинных чисел
+    result = decimal_num1 + decimal_num2
+
+    # Вывод результата
+    print(f"Результат сложения: {result}")
+
+# Пример использования функции
+num1 = "1234567890123456789012345678901234567890"
+num2 = "9876543210987654321098765432109876543210"
+add_long_numbers(num1, num2)
